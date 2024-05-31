@@ -37,7 +37,6 @@ html
 {
     font-size: 4rem;
     line-height: 55px;
-    
 }
 .brand-name
 {
@@ -45,6 +44,7 @@ html
     font-weight: 400;
     letter-spacing: 4px;
     line-height: 120px;
+    font-weight: 700;
 }
 .poppins-regular {
     font-family: "Poppins", sans-serif;
