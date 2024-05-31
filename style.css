@@ -36,16 +36,36 @@ html
 .wel-text
 {
     font-size: 4rem;
-    line-height: 60px;
+    line-height: 55px;
+    
 }
 .brand-name
 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 120px;
 }
 .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  
+.nanum-gothic-regular
+{
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.sawarabi-gothic-regular 
+{
+    font-family: "Sawarabi Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.dotgothic16-regular {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   
