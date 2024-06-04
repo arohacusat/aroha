@@ -82,8 +82,8 @@ html
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .navbar {
     position: fixed; /* Make it stick/fixed */
