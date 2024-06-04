@@ -8,3 +8,14 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+$(function(){
+	$('#navbar-button').click(function(){
+		e1 = $('#brand-icon');
+        e1.addClass('animate');
+        e1.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+        function (e) {
+            e1.removeClass('animate');
+        });
+	});
+});
