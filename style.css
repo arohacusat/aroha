@@ -1,7 +1,7 @@
 html
 {
     scroll-behavior: smooth;
-    scroll-padding-top: 0;
+    scroll-padding-top: 1.5rem;
     scrollbar-width: none;
 }
 .brand-icon
@@ -85,15 +85,9 @@ html
     margin-left: 2rem;
     margin-right: 2rem;
 }
-.navbar {
-    position: fixed; /* Make it stick/fixed */
-    top: 0; /* Stay on top */
-    width: 100%; /* Full width */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
-}
 .sticky-icon  
 {
-    z-index:1;
+    z-index:2;
     position:fixed;
     bottom:3%;
     width: fit-content;
@@ -118,4 +112,26 @@ html
     border: 1px solid rgb(77, 77, 77);
 	margin-right:20px;
 	transition:all 0.5s;
+}
+.parallax-section {
+    background: no-repeat fixed;
+    background-image: url(media/Home.png);
+    height: 600px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.parallax-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0.501) 100%
+    );
+    z-index: -1;
 }
