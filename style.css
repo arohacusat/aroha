@@ -4,6 +4,13 @@ html
     scroll-padding-top: 1.5rem;
     scrollbar-width: none;
 }
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 .brand-icon
 {
     max-width: 4rem;
