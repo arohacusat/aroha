@@ -93,7 +93,7 @@
             <div class="container-fluid mt-5 pt-5">
                 <div class="row text-white d-flex align-items-center" >
                     <div class="col-md-5 px-5 about-title">
-                        <h1 class="wel-text text-primary fw-bolder dotgothic16-regular">About<br></h1>
+                        <h1 class="wel-text text-primary fw-bolder dotgothic16-regular">ABOUT<br></h1>
                         <h1 class="sawarabi-gothic-regular brand-name " style="line-height: normal;">AROHA</h1>
                     </div>
                     <div class="col-md-7 " style="padding: 0; background-image: url(media/cusat.png);  background-repeat: no-repeat; background-size: cover;">
@@ -110,7 +110,7 @@
             <div class="container py-5">
                 <div class="row mb-5">
                     <div class="col text-center">
-                        <h1 class="section-title fw-bolder dotgothic16-regular text-success">PROJECTS</h1>
+                        <h1 class="wel-text section-title fw-bolder dotgothic16-regular text-success">PROJECTS</h1>
                         <p class="lead">Explore our innovative drone projects and research initiatives</p>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
             <div class="container py-5">
                 <div class="row mb-5">
                     <div class="col text-center">
-                        <h1 class="section-title dotgothic16-regular fw-bolder text-info">GALLERY</h1>
+                        <h1 class="wel-text section-title dotgothic16-regular fw-bolder text-info">GALLERY</h1>
                         <p class="lead">A visual journey through our drone development and events</p>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="#" class="btn btn-outline-info btn-lg">View Full Gallery</a>
+                    <a href="#gallery-section" class="btn btn-outline-info btn-lg">View Full Gallery</a>
                 </div>
             </div>
         </section>
@@ -234,7 +234,7 @@
             <div class="container py-5">
                 <div class="row mb-5">
                     <div class="col text-center">
-                        <h1 class="section-title dotgothic16-regular text-danger fw-bolder">CONTACT</h1>
+                        <h1 class="wel-text section-title dotgothic16-regular text-danger fw-bolder">CONTACT</h1>
                         <p class="lead">Get in touch with the AROHA drone community</p>
                     </div>
                 </div>
@@ -243,14 +243,12 @@
                         <div class="contact-info h-100">
                             <h3 class="text-danger mb-4">Reach Out to Us</h3>
                             <p>Interested in joining our club, collaborating on a project, or learning more about our work? We'd love to hear from you.</p>
-                            
                             <div class="mt-4">
                                 <p><i class="fa fa-map-marker contact-icon"></i> School opf Engineering, CUSAT, Kochi, Kerala, India</p>
                                 <p><i class="fa fa-envelope contact-icon"></i> arohacusat@gmail.com</p>
                                 <p><i class="fa fa-phone contact-icon"></i> +91 8078584371</p>
                             </div>
-                            
-                            <div class="mt-4">
+                            <div class="mt-5">
                                 <h4 class="text-danger">Follow Us</h4>
                                 <div class="d-flex mt-3">
                                     <a href="https://www.instagram.com/aroha.cusat" class="text-white me-3"><i class="fa fa-instagram fa-2x"></i></a>
@@ -263,24 +261,37 @@
                     <div class="col-md-6">
                         <div class="contact-info">
                             <h3 class="text-danger mb-4">Send a Message</h3>
-                            <form>
+                            <div id="success-alert" class="alert success">
+                                <strong>Success!</strong> Thank you for your message! We'll get back to you soon.
+                            </div>
+                            <div id="error-alert" class="alert error">
+                                <strong>Error!</strong> <span id="error-message">There was an error submitting your form. Please try again.</span>
+                            </div>
+                            
+                            <form id="sheetdb-form">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Your Name</label>
-                                    <input type="text" class="form-control bg-dark text-white border-dark" id="name" required>
+                                    <input type="text" name="data[Name]" class="form-control" id="name" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control bg-dark text-white border-dark" id="email" required>
+                                    <input type="email" name="data[Email]" class="form-control" id="email" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control bg-dark text-white border-dark" id="subject" required>
+                                    <input type="text" name="data[Subject]" class="form-control" id="subject" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control bg-dark text-white border-dark" id="message" rows="4" required></textarea>
+                                    <textarea class="form-control" name="data[Message]" id="message" rows="4" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                <button type="submit" class="btn btn-danger btn-lg">
+                                    <span id="button-text">Send Message</span>
+                                    <div id="button-spinner" class="spinner-border spinner-border-sm" role="status" style="display: none;">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </button>                                
+                                <div class="status" id="status-message"></div>
                             </form>
                         </div>
                     </div>
