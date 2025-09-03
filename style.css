@@ -26,7 +26,8 @@ html
     margin-left: auto;
     margin-right: auto;
     background:#ffffff;
-    transition: 0.2s ease-in-out;}
+    transition: 0.2s ease-in-out;
+}
 .nav-item:hover::after
 {
     width:50%;
@@ -134,4 +135,235 @@ html
         rgba(0, 0, 0, 0.501) 100%
     );
     z-index: -1;
+}
+
+/* Additional styles for new sections */
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-container:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wel-text {
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    
+    .brand-name {
+        font-size: 2rem;
+        line-height: 80px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-dis {
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .sticky-icon {
+        bottom: 2%;
+    }
+    
+    .sticky-icon a i {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        margin-right: 15px;
+    }
+}
+
+/* Animation for scroll-triggered elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom button styles */
+.btn-outline-warning {
+    border-width: 2px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-outline-warning:hover {
+    background-color: transparent;
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+/* Form styling */
+.form-control {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid #444 !important;
+    color: white !important;
+}
+
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+    color: white !important;
+}
+
+
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+            
+.project-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-container:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.contact-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem 0;
+    margin-top: 4rem;
 }
