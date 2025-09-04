@@ -150,3 +150,106 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+// Auto-hide navbar functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Variables for navbar hide/show functionality
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar.offsetHeight;
+    const mobileOverlay = document.createElement('div');
+    mobileOverlay.className = 'mobile-menu-overlay';
+    document.body.appendChild(mobileOverlay);
+    
+    // Set initial state
+    navbar.style.top = '0';
+    
+    // Function to handle navbar visibility on scroll
+    function handleNavbarScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+            // Scroll down - hide navbar
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scroll up - show navbar
+            navbar.classList.remove('navbar-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    }
+    
+    // Mobile menu close when clicking outside
+    function setupMobileMenuClose() {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('myNavbar');
+        
+        // Only set up if we're on mobile
+        if (window.innerWidth >= 768) return;
+        
+        navbarToggler.addEventListener('click', function() {
+            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+            if (isExpanded) {
+                mobileOverlay.classList.add('active');
+            } else {
+                mobileOverlay.classList.remove('active');
+            }
+        });
+        
+        mobileOverlay.addEventListener('click', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                navbarToggler.click(); // This will close the menu
+                mobileOverlay.classList.remove('active');
+            }
+        });
+        
+        // Also close menu when a nav link is clicked (on mobile)
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    navbarToggler.click();
+                    mobileOverlay.classList.remove('active');
+                }
+            });
+        });
+    }
+    
+    // Initialize everything
+    function initNavbar() {
+        // Set up scroll event listener with throttling
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    handleNavbarScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Set up mobile menu functionality
+        setupMobileMenuClose();
+        
+        // Update on window resize
+        window.addEventListener('resize', function() {
+            // Re-setup mobile menu if needed
+            setupMobileMenuClose();
+            
+            // Ensure overlay is hidden on desktop
+            if (window.innerWidth >= 768) {
+                mobileOverlay.classList.remove('active');
+            }
+        });
+    }
+    
+    // Start the navbar functionality
+    initNavbar();
+    
+    // Your existing form submission code follows below...
+    // ... [your existing form code remains unchanged]
+});

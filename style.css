@@ -475,3 +475,63 @@ footer {
             font-size: 14px;
             min-height: 20px;
         }
+        /* Add these styles to your existing CSS */
+
+/* Navbar animation styles */
+/* Navbar animation styles */
+.navbar {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+/* Mobile menu close area */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1030;
+}
+
+@media (max-width: 767.98px) {
+    .mobile-menu-overlay.active {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        transition: all 0.3s ease;
+    }
+    
+    /* Fix for shrunken navbar on mobile */
+    .navbar-brand, .navbar-brand-two {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Ensure proper navbar height */
+.navbar-balck {
+    min-height: 4.9rem; /* Matching your padding-top value */
+}
+
+/* Fix for brand icon sizing */
+.brand-icon {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+@media (max-width: 768px) {
+    .brand-icon {
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+    }
+}
