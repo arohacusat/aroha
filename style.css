@@ -525,13 +525,13 @@ footer {
 
 /* Fix for brand icon sizing */
 .brand-icon {
-    max-width: 3rem;
-    max-height: 3rem;
+    max-width: 4rem;
+    max-height: 4rem;
 }
 
 @media (max-width: 768px) {
     .brand-icon {
-        max-width: 2.5rem;
-        max-height: 2.5rem;
+        max-width: 3.5rem;
+        max-height: 3.5rem;
     }
 }
