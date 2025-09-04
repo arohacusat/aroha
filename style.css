@@ -478,7 +478,7 @@ footer {
         /* Add these styles to your existing CSS */
 
 /* Navbar animation styles */
-/* Navbar animation styles */
+
 .navbar {
     transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
@@ -521,17 +521,4 @@ footer {
 /* Ensure proper navbar height */
 .navbar-balck {
     min-height: 4.9rem; /* Matching your padding-top value */
-}
-
-/* Fix for brand icon sizing */
-.brand-icon {
-    max-width: 4rem;
-    max-height: 4rem;
-}
-
-@media (max-width: 768px) {
-    .brand-icon {
-        max-width: 3.5rem;
-        max-height: 3.5rem;
-    }
 }
