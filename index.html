@@ -14,53 +14,52 @@
     </head>
     <body class="bg-black poppins-regular">
         <header class="fixed-top">
-    <div class="row">
-        <nav class="navbar navbar-expand-md navbar-black bg-black" id="mainNavbar">
-                <div class="container-fluid">                
-                        <div class="d-flex d-md-none flex-grow-1">
-                            <span class="w-100 d-md-none d-block">
-                                <!-- hidden spacer to center brand on mobile -->
-                            </span>
-                            <a class="navbar-brand-two mx-auto d-md-none d-inline-block"  href="#">
-                                <img class="brand-icon" id="brand-icon" src="media/favicon.png" alt="logo">
-                            </a>
-                            <div class="w-100">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" id="navbar-button">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-black bg-black" id="mainNavbar">
+                    <div class="container-fluid">                
+                            <div class="d-flex d-md-none flex-grow-1">
+                                <span class="w-100 d-md-none d-block">
+                                    <!-- hidden spacer to center brand on mobile -->
+                                </span>
+                                <a class="navbar-brand-two mx-auto d-md-none d-inline-block"  href="#">
+                                    <img class="brand-icon" id="brand-icon" src="media/favicon.png" alt="logo">
+                                </a>
+                                <div class="w-100">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" id="navbar-button">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse navbar-collapse text-white" id="myNavbar">
+                                <ul class="navbar-nav ms-auto flex-nowrap text-center">
+                                    <li class="nav-item">
+                                        <a href="#projects-section" class="nav-link me-5 ms-5 menu-item nav-active text-white porjects-nav">PROJECTS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#gallery-section" class="nav-link me-5 ms-5 menu-item text-white gallery-nav">GALLERY</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex">
+                                <a class="navbar-brand d-none mx-auto d-md-inline-block ps-5 pe-5 pt-0 pb-0" href="#home-section">
+                                    <img class="brand-icon" src="media/favicon.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="collapse navbar-collapse text-white" id="myNavbar">
+                                <ul class="navbar-nav flex-nowrap text-center text-white">
+                                    <li class="nav-item .about-nav">
+                                        <a href="#about-section" class="nav-link me-5 ms-5 menu-item text-white" >ABOUT</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#contact-section" class="nav-link ms-5 me-5 menu-item text-white contact-nav" >CONTACT</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="collapse navbar-collapse text-white" id="myNavbar">
-                            <ul class="navbar-nav ms-auto flex-nowrap text-center">
-                                <li class="nav-item">
-                                    <a href="#projects-section" class="nav-link me-5 ms-5 menu-item nav-active text-white porjects-nav">PROJECTS</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#gallery-section" class="nav-link me-5 ms-5 menu-item text-white gallery-nav">GALLERY</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex">
-                            <a class="navbar-brand d-none mx-auto d-md-inline-block ps-5 pe-5 pt-0 pb-0" href="#home-section">
-                                <img class="brand-icon" src="media/favicon.png" alt="logo">
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse text-white" id="myNavbar">
-                            <ul class="navbar-nav flex-nowrap text-center text-white">
-                                <li class="nav-item .about-nav">
-                                    <a href="#about-section" class="nav-link me-5 ms-5 menu-item text-white" >ABOUT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#contact-section" class="nav-link ms-5 me-5 menu-item text-white contact-nav" >CONTACT</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-                    </div>
-            
-        </nav>
-    </div>
-</header>
+                </nav>
+            </div>
+        </header>
         <div style="padding-top: 4.9rem;"> </div>
         <section class="bg-black text-white" >
             <div class="container-fluid">
@@ -73,6 +72,7 @@
                 </div>
             </div>
         </section>
+        <!-- Home Section -->
         <section class="bg-black text-white parallax-section" id="home-section" >
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center align-items-center flex-wrap ">
@@ -91,16 +91,37 @@
             </div>
         </div>
         </section>
+        <!-- About Section -->
         <section id="about-section" >
             <div class="container-fluid mt-5 pt-5">
                 <div class="row text-white d-flex align-items-center" >
                     <div class="col-md-5 px-5 about-title">
-                        <h1 class="wel-text text-primary fw-bolder dotgothic16-regular">ABOUT<br></h1>
+                        <h1 class="wel-text fw-bolder dotgothic16-regular text-primary">ABOUT<br></h1>
                         <h1 class="sawarabi-gothic-regular brand-name " style="line-height: normal;">AROHA</h1>
                     </div>
                     <div class="col-md-7 " style="padding: 0; background-image: url(media/cusat.png);  background-repeat: no-repeat; background-size: cover;">
                         <div class="mask gradient-custom about-dis" style="padding:0; height: 600px; margin: 0;">    
-                            <p class="lead about-dis">CUSAT's Drone Club, AROHA, is a competitive community where passionate individuals push the boundaries of drone technology. Through workshops, ambitious projects, and a collaborative environment, AROHA empowers members to become industry leaders. Join the community to embark on a flight of discovery and technical excellence, shaping the future of Drone technology.</p>
+                            <div class="p-4 text-justify pt-5 mt-4">
+                                <p class="lead">CUSAT's Drone Club, AROHA, is a competitive community where passionate individuals push the boundaries of drone technology. Through workshops, ambitious projects, and a collaborative environment, AROHA empowers members to become industry leaders. Join the community to embark on a flight of discovery and technical excellence, shaping the future of Drone technology.</p>
+                            </div>
+                            <div class="rank-boxes">                                
+                                <!-- Rank Box 2 -->
+                                <div class="rank-box">
+                                    <i class="fas fa-medal medal-icon silver"></i>
+                                    <div class="rank-number">#AIR 2</div>
+                                    <div class="rank-label">Kerala Rank</div>
+                                    <div class="rank-competition">Aerothon '25 Phase 1</div>
+                                    <div class="rank-date">January 2025</div>
+                                </div>                                
+                                <!-- Rank Box 3 -->
+                                <div class="rank-box">
+                                    <i class="fas fa-award medal-icon bronze"></i>
+                                    <div class="rank-number">#Top 15</div>
+                                    <div class="rank-label">International Finalist</div>
+                                    <div class="rank-competition">Space Drone Challenge</div>
+                                    <div class="rank-date">November 2024</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ html
 {
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.804),
+        rgba(0, 0, 0, 0.844),
         rgba(0, 0, 0, 0.501) 100%
     );
 }
@@ -794,4 +794,53 @@ footer {
                 width: 100px;
                 height: 100px;
             }
+        }
+
+       
+.col-md-7 > .mask,
+.col-md-7 > .mask.about-dis {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box;
+  padding: 20px; /* optional */
+}
+
+
+.rank-boxes {
+  display: flex !important;
+    justify-content: start !important;
+}
+
+        .rank-box {
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            min-width: 250px;
+            flex: 1;
+            transition: transform 0.3s ease;
+        }
+        .rank-box:hover {
+            transform: translateY(-5px);
+        }
+        .medal-icon {
+            font-size: 2.5rem;
+        }
+        .rank-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .rank-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .rank-competition {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .rank-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
