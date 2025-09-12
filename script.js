@@ -253,3 +253,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Your existing form submission code follows below...
     // ... [your existing form code remains unchanged]
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+        const teamMembers = document.querySelectorAll('.team-member');
+        
+        // Add touch support for mobile devices
+        teamMembers.forEach(member => {
+            let startX, endX;
+            
+            member.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+            }, false);
+            
+            member.addEventListener('touchend', function(e) {
+                endX = e.changedTouches[0].clientX;
+                
+                // If it's a tap (not a swipe), toggle the flip
+                if (Math.abs(endX - startX) < 30) {
+                    const inner = this.querySelector('.team-member-inner');
+                    if (inner.style.transform === 'rotateY(180deg)') {
+                        inner.style.transform = 'rotateY(0deg)';
+                    } else {
+                        inner.style.transform = 'rotateY(180deg)';
+                    }
+                }
+            }, false);
+        });
+        
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                teamMembers.forEach(member => {
+                    member.querySelector('.team-member-inner').style.transform = 'rotateY(0deg)';
+                });
+            }
+        });
+    });
