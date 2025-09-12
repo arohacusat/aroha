@@ -796,20 +796,10 @@ footer {
             }
         }
 
-       
-.col-md-7 > .mask,
-.col-md-7 > .mask.about-dis {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  box-sizing: border-box;
-  padding: 20px; /* optional */
-}
-
 
 /* Make mask container stack children */
 .mask.about-dis {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;  /* stack vertically */
   align-items: flex-start; /* align left */
 }
@@ -817,10 +807,11 @@ footer {
 /* Rank boxes styling */
 .rank-boxes {
   display: flex;
-  flex-direction: row;     /* row on desktop */
+  flex-direction: row !important;  /* row on desktop */
   justify-content: flex-start;
   flex-wrap: wrap;         /* wrap if needed */
   gap: 20px;
+  padding-left: 1.5rem;
   margin-top: 20px;
 }
 
