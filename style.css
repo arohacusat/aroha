@@ -518,8 +518,12 @@ footer {
     }
 }
 
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2); /* Make the icon white */
+}
+
 /* Ensure proper navbar height */
-.navbar-balck {
+.navbar-black {
     min-height: 4.9rem; /* Matching your padding-top value */
 }
 
