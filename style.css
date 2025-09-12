@@ -844,3 +844,14 @@ footer {
             font-size: 0.9rem;
             opacity: 0.8;
         }
+
+        @media (max-width: 768px) {
+  .rank-boxes {
+    flex-direction: column;   /* stack one below the other */
+    align-items: flex-start;  /* left align */
+  }
+  .rank-box {
+    width: 100%;              /* take full width on mobile */
+    max-width: 300px;         /* optional: limit card width */
+  }
+}
