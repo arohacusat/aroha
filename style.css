@@ -799,31 +799,28 @@ footer {
 
 /* Make mask container stack children */
 .mask.about-dis {
-  display: inline-flex;
-  flex-direction: column;  /* stack vertically */
-  align-items: flex-start; /* align left */
-}
+    min-height: fit-content;
+    display: inline-flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: flex-start; /* align left */
+ }
 
 /* Rank boxes styling */
 .rank-boxes {
   display: flex;
   flex-direction: row !important;  /* row on desktop */
   justify-content: flex-start;
-  flex-wrap: wrap;         /* wrap if needed */
-  gap: 25px;
+  gap: 3rem;
   padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-top: 20px;
 }
 
 /* On mobile, stack rank cards below text */
 @media (max-width: 768px) {
   .rank-boxes {
-    flex-direction: column;  /* stack vertically */
+    flex-direction: row !important;  /* stack vertically */
     align-items: flex-start; /* keep left aligned */
-  }
-  .rank-box {
-    width: 100%;             /* make cards wide on mobile */
-    max-width: 320px;        /* optional limit */
   }
 }
         .rank-box:hover {
@@ -833,7 +830,7 @@ footer {
             font-size: 2.5rem;
         }
         .rank-number {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             margin: 10px 0;
         }
