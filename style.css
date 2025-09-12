@@ -807,19 +807,34 @@ footer {
 }
 
 
-.rank-boxes {
-  display: flex !important;
-    justify-content: start !important;
+/* Make mask container stack children */
+.mask.about-dis {
+  display: flex;
+  flex-direction: column;  /* stack vertically */
+  align-items: flex-start; /* align left */
 }
 
-        .rank-box {
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            min-width: 250px;
-            flex: 1;
-            transition: transform 0.3s ease;
-        }
+/* Rank boxes styling */
+.rank-boxes {
+  display: flex;
+  flex-direction: row;     /* row on desktop */
+  justify-content: flex-start;
+  flex-wrap: wrap;         /* wrap if needed */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* On mobile, stack rank cards below text */
+@media (max-width: 768px) {
+  .rank-boxes {
+    flex-direction: column;  /* stack vertically */
+    align-items: flex-start; /* keep left aligned */
+  }
+  .rank-box {
+    width: 100%;             /* make cards wide on mobile */
+    max-width: 320px;        /* optional limit */
+  }
+}
         .rank-box:hover {
             transform: translateY(-5px);
         }
@@ -844,14 +859,3 @@ footer {
             font-size: 0.9rem;
             opacity: 0.8;
         }
-
-        @media (max-width: 768px) {
-  .rank-boxes {
-    flex-direction: column;   /* stack one below the other */
-    align-items: flex-start;  /* left align */
-  }
-  .rank-box {
-    width: 100%;              /* take full width on mobile */
-    max-width: 300px;         /* optional: limit card width */
-  }
-}
