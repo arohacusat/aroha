@@ -810,7 +810,7 @@ footer {
   flex-direction: row !important;  /* row on desktop */
   justify-content: flex-start;
   flex-wrap: wrap;         /* wrap if needed */
-  gap: 20px;
+  gap: 25px;
   padding-left: 1.5rem;
   margin-top: 20px;
 }
